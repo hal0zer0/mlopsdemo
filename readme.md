@@ -21,7 +21,7 @@ When we've got a model that meets our criteria (in this case, a simple check to 
 
 ![API schema](./images/API.png)
 
-In a real production environment, I'd use something like Seldon Core (configured in my initial Terraform setup file) to deploy the API to a Kubernetes cluster.  As I recently learned (the hard way) just how quickly the cost of a Kubernetes cluster can build up, I have instead simply included an example Terraform configuration that I might use if I were to deploy for production.
+In a real production environment, I'd use something like Seldon Core (configured in my initial Terraform setup file) to deploy the API to a Kubernetes cluster.  Due to how quickly the cost of a Kubernetes cluster can build up, I have instead simply included an example Terraform configuration that I might use if I were to deploy for production.
 
 ## Possible Improvements
 If developing something like this with a team, I'd use a local development environment and push my code to Github (as opposed to the Notebook currently in use).  Databricks could then be configured to watch my repo for commits and optionally run and deploy the API automatically.  
