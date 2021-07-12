@@ -17,11 +17,11 @@ As the focus of this particular project was the Ops side, I kept the ML side fai
 All experiment runs are fully logged in MLFlow, making for easy comparisons of the metrics and source code used for every model.
 ![Example accuracy comparison](./images/comparison.png)
 ## API & Deployment
-When we're got a model that meets our criteria (in this case, a simple check to confirm that the final accuracy is at least 99%) we can register it to allow it to be deployed as a REST API using MLFlow's internal tools.
+When we've got a model that meets our criteria (in this case, a simple check to confirm that the final accuracy is at least 99%) we can register it to allow it to be deployed as a REST API using MLFlow's internal tools.
 
 ![API schema](./images/API.png)
 
-In a real production environment, I'd use something like Seldon Core (configured in my initial Terraform setup file) to deploy the API to a Kubernetes cluster.  As I recently learned (the hard way) just how quickly the cost of a Kubernetes cluster can build up, I have instead simple included the Seldon configuration that I might use if I were to deploy for production.
+In a real production environment, I'd use something like Seldon Core (configured in my initial Terraform setup file) to deploy the API to a Kubernetes cluster.  As I recently learned (the hard way) just how quickly the cost of a Kubernetes cluster can build up, I have instead simply included an example Terraform configuration that I might use if I were to deploy for production.
 
 ## Possible Improvements
 If developing something like this with a team, I'd use a local development environment and push my code to Github (as opposed to the Notebook currently in use).  Databricks could then be configured to watch my repo for commits and optionally run and deploy the API automatically.  
